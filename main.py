@@ -1,15 +1,15 @@
 import argparse
-from scrape.readme_scraper import ReadMeScraper
+from scrape.link_scraper import LinkScraper
 from scrape.arxiv_scraper import ArxivScraper
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--scrape", type=str, default="readme")
+    parser.add_argument("--scrape", action="store_true")
 
     args = parser.parse_args()
 
-    if args.scrape == "readme":
-        readme_scraper = ReadMeScraper("data/readme_collections.txt", "cache/readme/links.csv")
-        df = readme_scraper.scrape()
+    if args.scrape:
+        link_scraper = LinkScraper("data/collections.txt", "cache/plaintext/links.csv")
+        df = link_scraper.scrape()
         arxiv_scraper = ArxivScraper(df, "data/", "cache/arxiv", save_ids=True)
         arxiv_scraper.scrape()
 

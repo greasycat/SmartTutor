@@ -2,8 +2,8 @@ from .downloader import Downloader
 import re
 import pandas as pd
 
-# This class is used to scrape all the links
-class ReadMeScraper:
+# This class is used to scrape all the links from any text file
+class LinkScraper:
     def __init__(self, collection_file: str, output_file: str):
         self.output_file = output_file
         self.collection_file = collection_file
@@ -15,7 +15,7 @@ class ReadMeScraper:
 
         self.downloaders = []
         for folder in self.folders:
-            self.downloaders.append(Downloader(folder, "cache/readme"))
+            self.downloaders.append(Downloader(folder, "cache/plaintext"))
 
     def scrape(self):
         self.links = []
@@ -47,6 +47,10 @@ class ReadMeScraper:
         tuples = list(set(tuples))
         # save the links to a csv file
         self.df = pd.DataFrame(tuples, columns=["links", "sites", "types"])
+
+        # reorder the columns
+        self.df = self.df[["sites", "types", "links"]]
+
         self.df.to_csv(self.output_file, index=False)
         return self.df
     

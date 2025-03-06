@@ -20,11 +20,13 @@ class Downloader:
             print(f"Using cached file: {file_path}")
             with open(file_path, "r") as f:
                 return f.read()
+
         # Download the file, enable redirects
         response = requests.get(self.url, allow_redirects=True)
         with open(file_path, "wb") as f:
             f.write(response.content)
-        
+
+        return response.content.decode("utf-8")
 
     # replace all non-alphanumeric characters with underscores
     @staticmethod
