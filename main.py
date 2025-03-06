@@ -8,9 +8,9 @@ def main():
     args = parser.parse_args()
 
     if args.scrape == "readme":
-        readme_scraper = ReadMeScraper("readme_collections.txt", "cache/readme/links.csv")
+        readme_scraper = ReadMeScraper("data/readme_collections.txt", "cache/readme/links.csv")
         df = readme_scraper.scrape()
-        arxiv_scraper = ArxivScraper(df, "cache/arxiv", save_ids=True)
+        arxiv_scraper = ArxivScraper(df, "data/", "cache/arxiv", save_ids=True)
         arxiv_scraper.scrape()
 
 
