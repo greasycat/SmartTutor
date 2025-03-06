@@ -17,3 +17,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv sync
 ```
 
+## 3. Scrape meta data
+```bash
+uv run main.py --scrape
+```
