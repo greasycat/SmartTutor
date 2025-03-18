@@ -1,0 +1,20 @@
+Year,Paper,Authors,Link
+1988,Learning to predict by the methods of temporal differences,Richard S. Sutton,https://link.springer.com/content/pdf/10.1007/BF00115009.pdf
+1989,Learning from Delayed Rewards,Christopher Watkins,In this paper  a collection of value-based quantum reinforcement learning algorithms are introduced which use Grover’s algorithm to update the policy  which is stored as a superposition of qubits associated with each possible action  and their parameters are explored. These algorithms may be grouped in two classes  one class which uses value functions (V(s)) and new class which uses action value functions (Q(s a)). The new (Q(s a))-based quantum algorithms are found to converge faster than V(s)-based algorithms  and in general the quantum algorithms are found to converge in fewer iterations than their classical counterparts  netting larger returns during training. This is due to fact that the (Q(s a)) algorithms are more precise than those based on V(s)  meaning that updates are incorporated into the value function more efficiently. This effect is also enhanced by the observation that the Q(s a)-based algorithms may be trained with higher learning rates. These algorithms are then extended by adding multiple value functions  which are observed to allow larger learning rates and have improved convergence properties in environments with stochastic rewards  the latter of which is further improved by the probabilistic nature of the quantum algorithms. Finally  the quantum algorithms were found to use less CPU time than their classical counterparts overall  meaning that their benefits may be realized even without a full quantum computer.
+2013,Playing Atari with Deep Reinforcement Learning,Volodymyr Mnih et al.,https://arxiv.org/abs/1312.5602
+2015,Human-level control through deep reinforcement learning,Volodymyr Mnih et al.,https://www.nature.com/articles/nature14236
+2017,Proximal Policy Optimization Algorithms,John Schulman et al.,https://arxiv.org/abs/1707.06347
+2022,Learning robust perceptive locomotion for quadrupedal robots in the wild,Joonho Lee et al.,https://arxiv.org/abs/2201.08117
+2022,BC-Z: Zero-Shot Task Generalization with Robotic Imitation Learning,Eric Jang et al.,https://arxiv.org/abs/2202.02005
+2022,Outracing champion Gran Turismo drivers with deep reinforcement learning (Sophy),Pete Wurman et al.,https://www.nature.com/articles/s41586-021-04357-7
+2022,Magnetic control of tokamak plasmas through deep reinforcement learning,Jonas Degrave et al.,https://www.nature.com/articles/s41586-021-04301-9
+2022,Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning (ANYmal),Nikita Rudin et al.,https://arxiv.org/abs/2109.11978
+2022,Discovering faster matrix multiplication algorithms with reinforcement learning (AlphaTensor),Alhussein Fawzi et al.,https://www.nature.com/articles/s41586-022-05172-4
+2023,Direct Preference Optimization: Your Language Model is Secretly a Reward Model,Rafael Rafailov et al.,https://arxiv.org/abs/2305.18290
+2023,Mastering Diverse Domains through World Models (DreamerV3),Danijar Hafner et al.,https://arxiv.org/abs/2301.04104
+2023,Grounding Large Language Models in Interactive Environments with Online RL (GLAM),Thomas Carta et al.,https://arxiv.org/abs/2302.02662
+2023,Efficient Online Reinforcement Learning with Offline Data (RLPD),Tatsuya Matsushima et al.,https://arxiv.org/abs/2302.02948
+2023,Reward Design with Language Models,Natasha Jaques et al.,https://arxiv.org/abs/2303.00001
+2023,Direct Preference Optimization: Your Language Model is Secretly a Reward Model (DPO),Rafael Rafailov et al.,https://arxiv.org/abs/2305.18290
+2023,Faster sorting algorithms discovered using deep reinforcement learning (AlphaDev),Daniel J. Mankowitz et al.,https://www.nature.com/articles/s41586-023-06004-9
+2023,Retroformer: Retrospective Large Language Agents with Policy Gradient Optimization,Wenlong Huang et al.,https://arxiv.org/abs/2308.02151

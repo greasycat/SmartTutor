@@ -1,6 +1,7 @@
 import argparse
-from scrape.link_scraper import LinkScraper
-from scrape.arxiv_scraper import ArxivScraper
+from scrape.arxiv_meta_loader import ArxivMetaLoader
+from scrape.load_papers import LoadPapers
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--scrape", action="store_true")
@@ -8,10 +9,13 @@ def main():
     args = parser.parse_args()
 
     if args.scrape:
-        link_scraper = LinkScraper("data/collections.txt", "cache/plaintext/links.csv")
-        df = link_scraper.scrape()
-        arxiv_scraper = ArxivScraper(df, "data/", "cache/arxiv", save_ids=True)
-        arxiv_scraper.scrape()
+        load_papers = LoadPapers("data/manually_categorized")
+        papers = load_papers.load()
+        arxiv_meta_loader = ArxivMetaLoader(papers)
+        df = arxiv_meta_loader.loads(["summary"])
+        print(df.head())
+
+
 
 
 

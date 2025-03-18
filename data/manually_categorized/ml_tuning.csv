@@ -1,0 +1,5 @@
+Year,Paper,Authors,Link
+2009,Gaussian Process Optimization in the Bandit Setting: No Regret and Experimental Design,Niranjan Srinivas et al.,https://arxiv.org/abs/0912.3995
+2012,Random Search for Hyper-Parameter Optimization,James Bergstra and Yoshua Bengio,https://www.jmlr.org/papers/v13/bergstra12a.html
+2016,Hyperband: A Novel Bandit-Based Approach to Hyperparameter Optimization,Lisha Li et al.,https://arxiv.org/pdf/1603.06560.pdf
+2017,SMASH: One-Shot Model Architecture Search through HyperNetworks,Andrew Brock et al.,https://arxiv.org/abs/1708.05344

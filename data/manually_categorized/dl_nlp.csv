@@ -1,0 +1,53 @@
+Year,Paper,Authors,Link
+2010,Recurrent neural network based language model,Tomas Mikolov et al.,A new recurrent neural network based language model (RNN LM) with applications to speech recognition is presented. Results indicate that it is possible to obtain around 50% reduction of perplexity by using mixture of several RNN LMs  compared to a state of the art backoff language model. Speech recognition experiments show around 18% reduction of word error rate on the Wall Street Journal task when comparing models trained on the same amount of data  and around 5% on the much harder NIST RT05 task  even when the backoff model is trained on much more data than the RNN LM. We provide ample empirical evidence to suggest that connectionist language models are superior to standard n-gram techniques  except their high computational (training) complexity.
+2013,Distributed Representations of Words and Phrases and their Compositionality,Tomas Mikolov et al.,https://arxiv.org/abs/1310.4546
+2014,Sequence to Sequence Learning with Neural Networks,Ilya Sutskever et al.,https://arxiv.org/abs/1409.3215
+2014,Neural Word Embedding as Implicit Matrix Factorization,Omer Levy and Yoav Goldberg,https://papers.nips.cc/paper_files/paper/2014/hash/b78666971ceae55a8e87efb7cbfd9ad4-Abstract.html
+2014,Generating Sequences With Recurrent Neural Networks,Alex Graves,https://arxiv.org/pdf/1308.0850.pdf
+2015,Neural Machine Translation of Rare Words with Subword Units,Rico Sennrich et al.,https://arxiv.org/abs/1508.07909
+2016,A Structured Self-attentive Sentence Embedding,Zhouhan Lin et al.,https://arxiv.org/abs/1703.03130
+2016,Google's Neural Machine Translation System: Bridging the Gap between Human and Machine Translation,Yonghui Wu et al.,https://arxiv.org/abs/1609.08144v2
+2017,Attention Is All You Need,Ashish Vaswani et al.,https://arxiv.org/abs/1706.03762
+2018,BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,Jacob Devlin et al.,https://arxiv.org/abs/1810.04805v2
+2018,Universal Language Model Fine-tuning for Text Classification,Jeremy Howard and Sebastian Ruder,https://arxiv.org/abs/1801.06146
+2020,Language Models are Few-Shot Learners,Tom B. Brown et al.,https://arxiv.org/abs/2005.14165
+2021,LoRA: Low-Rank Adaptation of Large Language Models,Edward J. Hu et al.,https://arxiv.org/abs/2106.09685
+2022,LaMBDA: Language Models for Dialog Applications,Romal Thoppilan et al.,https://arxiv.org/abs/2201.08239
+2022,Chain-of-Thought Prompting Elicits Reasoning in Large Language Models,Jason Wei et al.,https://arxiv.org/abs/2201.11903
+2022,Competition-Level Code Generation with AlphaCode,Li Yujia et al.,https://arxiv.org/abs/2203.07814
+2022,Finetuned Language Models Are Zero-Shot Learners,Jason Wei et al.,https://arxiv.org/abs/2109.01652
+2022,Training language models to follow human instructions with human feedback,Long Ouyang et al.,https://arxiv.org/abs/2203.02155
+2022,Multitask Prompted Training Enables Zero-Shot Task Generalization,Victor Sanh et al.,https://arxiv.org/abs/2110.08207
+2022,Training Compute-Optimal Large Language Models,Jordan Hoffmann et al.,https://arxiv.org/abs/2203.15556
+2022,"Do As I Can, Not As I Say: Grounding Language in Robotic Affordances",Michael Ahn et al.,https://arxiv.org/abs/2204.01691
+2022,GPT-NeoX-20B: An Open-Source Autoregressive Language Model,Sid Black et al.,https://arxiv.org/abs/2204.06745
+2022,PaLM: Scaling Language Modeling with Pathways,Aakanksha Chowdhery et al.,https://arxiv.org/abs/2204.02311
+2022,Beyond the Imitation Game: Quantifying and extrapolating the capabilities of language models,Srivastava et al.,https://arxiv.org/abs/2206.04615
+2022,Solving Quantitative Reasoning Problems with Language Models,Lewkowycz et al.,https://arxiv.org/abs/2206.14858
+2022,ReAct: Synergizing Reasoning and Acting in Language Models,Shunyu Yao et al.,https://arxiv.org/abs/2210.03629
+2022,BLOOM: A 176B-Parameter Open-Access Multilingual Language Model,BigScience Workshop,https://arxiv.org/abs/2211.05100
+2022,Large Language Models Encode Clinical Knowledge,Singhal et al.,https://arxiv.org/abs/2212.13138
+2023,DetectGPT: Zero-Shot Machine-Generated Text Detection using Probability Curvature,Eric Mitchell et al.,https://arxiv.org/abs/2301.11305
+2023,Toolformer: Language Models Can Teach Themselves to Use Tools,Timo Schick et al.,https://arxiv.org/abs/2302.04761
+2023,LLaMA: Open and Efficient Foundation Language Models,Hugo Touvron et al.,https://arxiv.org/abs/2302.13971
+2023,Sparks of Artificial General Intelligence: Early experiments with GPT-4,Sébastien Bubeck et al.,https://arxiv.org/abs/2303.12712
+2023,HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in HuggingFace,Yongliang Shen et al.,https://arxiv.org/abs/2303.17580
+2023,BloombergGPT: A Large Language Model for Finance,Shijie Wu et al.,https://arxiv.org/abs/2303.17564
+2023,Instruction Tuning with GPT-4,Baolin Peng et al.,https://arxiv.org/abs/2304.03277
+2023,Generative Agents: Interactive Simulacra of Human Behavior,Joon Sung Park et al.,https://arxiv.org/abs/2304.03442
+2023,PaLM 2 Technical Report,Rohan Anil et al.,https://arxiv.org/abs/2305.10403
+2023,Tree of Thoughts: Deliberate Problem Solving with Large Language Models,Yao Fu et al.,https://arxiv.org/abs/2305.10601
+2023,LIMA: Less Is More for Alignment,Chunting Zhou et al.,https://arxiv.org/abs/2305.11206
+2023,QLoRA: Efficient Finetuning of Quantized LLMs,Tim Dettmers et al.,https://arxiv.org/abs/2305.14314
+2023,Voyager: An Open-Ended Embodied Agent with Large Language Models,Guanzhi Wang et al.,https://arxiv.org/abs/2305.16291
+2023,ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs,Yujia Qin et al.,https://arxiv.org/abs/2307.16789
+2023,MetaGPT: Meta Programming for Multi-Agent Collaborative Framework,Sirui Hong et al.,https://arxiv.org/abs/2308.00352
+2023,Code Llama: Open Foundation Models for Code,Baptiste Rozière et al.,https://arxiv.org/abs/2308.12950
+2023,RLAIF: Scaling Reinforcement Learning from Human Feedback with AI Feedback,Harrison Lee et al.,https://arxiv.org/abs/2309.00267
+2023,Large Language Models as Optimizers,Chengrun Yang et al.,https://arxiv.org/abs/2309.03409
+2023,Eureka: Human-Level Reward Design via Coding Large Language Models,Yecheng Jason Ma et al.,https://arxiv.org/abs/2310.12931
+2023,Mathematical discoveries from program search with large language models (FunSearch),Bernardino Romera-Paredes et al.,https://www.nature.com/articles/s41586-023-06924-6
+2023,The Impact of Positional Encoding on Length Generalization in Transformers,Amirhossein Kazemnejad et al.,https://arxiv.org/abs/2305.19466
+2023,Stabilizing Transformer Training by Preventing Attention Entropy Collapse,Shuangfei Zhai et al.,https://arxiv.org/abs/2303.06296
+2023,Efficient Streaming Language Models with Attention Sinks,Guangxuan Xiao et al.,https://arxiv.org/abs/2309.17453
+2017,Improving Language Understanding by Generative Pre-Training, A. Radford et al.,Natural language understanding comprises a wide range of diverse tasks such as textual entailment question answering semantic similarity assessment and document classification. Although large unlabeled text corpora are abundant labeled data for learning these specific tasks is scarce making it challenging for discriminatively trained models to perform adequately. We demonstrate that large gains on these tasks can be realized by generative pre-training of a language model on a diverse corpus of unlabeled text followed by discriminative fine-tuning on each specific task. In contrast to previous approaches we make use of task-aware input transformations during fine-tuning to achieve effective transfer while requiring minimal changes to the model architecture. We demonstrate the effectiveness of our approach on a wide range of benchmarks for natural language understanding. Our general task-agnostic model outperforms discriminatively trained models that use architectures specifically crafted for each task significantly improving upon the state of the art in 9 out of the 12 tasks studied. For instance we achieve absolute improvements of 8.9% on commonsense reasoning (Stories Cloze Test) 5.7% on question answering (RACE) and 1.5% on textual entailment (MultiNLI)

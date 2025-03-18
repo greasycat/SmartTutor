@@ -1,0 +1,5 @@
+Year,Paper,Authors,Link
+2013,Identifying and attacking the saddle point problem in high-dimensional non-convex optimization,Yann Dauphin et al.,https://arxiv.org/abs/1406.2572
+2014,Adam: A Method for Stochastic Optimization,Diederik P. Kingma and Jimmy Ba,https://arxiv.org/abs/1412.6980
+2015,Optimizing Neural Networks with Kronecker-factored Approximate Curvature,James Martens and Roger Grosse,https://arxiv.org/abs/1503.05671
+2019,ZeRO: Memory Optimizations Toward Training Trillion Parameter Models,Samyam Rajbhandari et al.,https://arxiv.org/abs/1910.02054

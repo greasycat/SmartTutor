@@ -1,0 +1,27 @@
+Year,Paper,Authors,Link
+2012,Deep neural networks for acoustic modeling in speech recognition: The shared views of four research groups,G. Hinton et al.,https://ieeexplore.ieee.org/document/6296526
+2012,Context-dependent pre-trained deep neural networks for large-vocabulary speech recognition,G. Dahl et al.,https://ieeexplore.ieee.org/document/5740583
+2012,Acoustic modeling using deep belief networks,A. Mohamed et al.,https://ieeexplore.ieee.org/document/5704567
+2013,Speech recognition with deep recurrent neural networks,A. Graves,http://arxiv.org/pdf/1303.5778.pdf
+2015,Deep speech 2: End-to-end speech recognition in English and Mandarin,D. Amodei et al.,https://arxiv.org/pdf/1512.02595
+2016,End-to-end attention-based large vocabulary speech recognition,D. Bahdanau et al.,https://arxiv.org/pdf/1508.04395
+2022,mSLAM: Massively multilingual joint pre-training for speech and text,Yu-An Chung et al.,https://arxiv.org/abs/2202.01374
+2022,ADD 2022: the First Audio Deep Synthesis Detection Challenge,Bhusan Chettri et al.,https://arxiv.org/abs/2202.08433
+2022,Efficient Training of Audio Transformers with Patchout (PaSST),Koutini et al.,https://arxiv.org/abs/2110.05069
+2022,MAESTRO: Matched Speech Text Representations through Modality Matching,Alexander H. Liu et al.,https://arxiv.org/abs/2204.03409
+2022,SpeechT5: Unified-Modal Encoder-Decoder Pre-Training for Spoken Language Processing,Junyi Ao et al.,https://arxiv.org/abs/2110.07205
+2022,WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing,Sanyuan Chen et al.,https://ieeexplore.ieee.org/abstract/document/9814838
+2022,BigSSL: Exploring the Frontier of Large-Scale Semi-Supervised Learning for ASR,Yu Zhang et al.,https://arxiv.org/abs/2109.13226
+2022,MuLan: A Joint Embedding of Music Audio and Natural Language,Qingqing Huang et al.,https://arxiv.org/abs/2208.12415
+2022,AudioLM: a Language Modeling Approach to Audio Generation,Zalán Borsos et al.,https://arxiv.org/abs/2209.03143
+2022,AudioGen: Textually Guided Audio Generation,Felix Kreuk et al.,https://arxiv.org/abs/2209.15352
+2022,High Fidelity Neural Audio Compression (EnCodec),Alexandre Défossez et al.,https://arxiv.org/abs/2210.13438
+2022,Robust Speech Recognition via Large-Scale Weak Supervision (Whisper),Alec Radford et al.,https://arxiv.org/abs/2212.04356
+2023,Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers (VALL-E),Chengyi Wang et al.,https://arxiv.org/abs/2301.02111
+2023,MusicLM: Generating Music From Text,Andrea Agostinelli et al.,https://arxiv.org/abs/2301.11325
+2023,AudioLDM: Text-to-Audio Generation with Latent Diffusion Models,Haohe Liu et al.,https://arxiv.org/abs/2301.12503
+2023,Google USM: Scaling Automatic Speech Recognition Beyond 100 Languages,Yu Zhang et al.,https://arxiv.org/abs/2303.01037
+2023,"Scaling Speech Technology to 1,000+ Languages (MMS)",Vineel Pratap et al.,https://arxiv.org/abs/2305.13516
+2023,Simple and Controllable Music Generation (MusicGen),Jade Copet et al.,https://arxiv.org/abs/2306.05284
+2023,AudioPaLM: A Large Language Model That Can Speak and Listen,Paul K. Rubenstein et al.,https://arxiv.org/abs/2306.12925
+2023,Voicebox: Text-Guided Multilingual Universal Speech Generation at Scale,Matthew Le et al.,https://arxiv.org/abs/2306.15687
