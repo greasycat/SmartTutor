@@ -1,5 +1,6 @@
 import psycopg
 import os
+import pandas as pd
 
 PASSWORD = os.getenv("VECTOR_DB_PWD")
 URL = f"postgresql://postgres:{PASSWORD}@smarttutor.eastus.azurecontainer.io:5432/postgres"
@@ -32,3 +33,11 @@ class VectorDB:
             (year, title, authors, summary, embedding),
         )
         self.conn.commit()
+    
+    def download_embeddings(self):
+        query = "SELECT embedding FROM resources;"
+        df = pd.read_sql(query, self.conn)
+        return df
+
+
+

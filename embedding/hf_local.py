@@ -17,3 +17,4 @@ class Embedding:
     def create_embedding_db(self, papers: pd.DataFrame):
         self.db.create_table()
         self._embed_paper(papers)
+    
