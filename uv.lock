@@ -1723,6 +1723,19 @@ wheels = [
 ]
 
 [[package]]
+name = "psycopg"
+version = "3.2.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "typing-extensions", marker = "python_full_version < '3.13'" },
+    { name = "tzdata", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/67/97/eea08f74f1c6dd2a02ee81b4ebfe5b558beb468ebbd11031adbf58d31be0/psycopg-3.2.6.tar.gz", hash = "sha256:16fa094efa2698f260f2af74f3710f781e4a6f226efe9d1fd0c37f384639ed8a", size = 156322 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d7/7d/0ba52deff71f65df8ec8038adad86ba09368c945424a9bd8145d679a2c6a/psycopg-3.2.6-py3-none-any.whl", hash = "sha256:f3ff5488525890abb0566c429146add66b329e20d6d4835662b920cbbf90ac58", size = 199077 },
+]
+
+[[package]]
 name = "ptyprocess"
 version = "0.7.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2291,10 +2304,12 @@ dependencies = [
     { name = "langchain-community" },
     { name = "langchain-huggingface" },
     { name = "pandas" },
+    { name = "psycopg" },
     { name = "pymupdf" },
     { name = "requests" },
     { name = "selenium" },
     { name = "tkinterdnd2" },
+    { name = "tqdm" },
     { name = "webdriver-manager" },
 ]
 
@@ -2305,10 +2320,12 @@ requires-dist = [
     { name = "langchain-community", specifier = ">=0.3.19" },
     { name = "langchain-huggingface", specifier = ">=0.1.2" },
     { name = "pandas", specifier = ">=2.2.3" },
+    { name = "psycopg", specifier = ">=3.2.6" },
     { name = "pymupdf", specifier = ">=1.25.4" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "selenium", specifier = ">=4.29.0" },
     { name = "tkinterdnd2", specifier = ">=0.4.3" },
+    { name = "tqdm", specifier = ">=4.67.1" },
     { name = "webdriver-manager", specifier = ">=4.0.2" },
 ]
 

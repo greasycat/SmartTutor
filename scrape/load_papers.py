@@ -57,19 +57,9 @@ class LoadPapers:
         df["summary"] = df["summary"].apply(clean_text_for_embedding)
         df["title"] = df["title"].apply(clean_text_for_embedding)
         df["authors"] = df["authors"].apply(clean_text_for_embedding)
-
         df["concat"] = df["title"] + " " + df["authors"] + " " + df["summary"]
+        df["dim"] = df["concat"].apply(lambda x: len(x.split(" ")))
 
         return df
 
 
-
-
-if __name__ == "__main__":
-    load_papers = LoadPapers("data/manually_categorized")
-    papers = load_papers.load()
-    print(papers.head())
-    # save the papers to a csv file
-    # set all NA values to None
-    papers = papers.fillna("na")
-    papers.to_csv("data/papers.csv", index=False)

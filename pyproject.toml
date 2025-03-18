@@ -10,9 +10,11 @@ dependencies = [
     "langchain-community>=0.3.19",
     "langchain-huggingface>=0.1.2",
     "pandas>=2.2.3",
+    "psycopg>=3.2.6",
     "pymupdf>=1.25.4",
     "requests>=2.32.3",
     "selenium>=4.29.0",
     "tkinterdnd2>=0.4.3",
+    "tqdm>=4.67.1",
     "webdriver-manager>=4.0.2",
 ]
