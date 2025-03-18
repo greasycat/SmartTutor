@@ -1,5 +1,5 @@
 Year,Paper,Authors,Link
-1991,Recurrent Networks and NARMA Modeling,J. Connor et al.,https://proceedings.neurips.cc/paper/1991/file/5ef0b4eba35ab2d6180b0bca7e46b6f9-Paper.pdf
+1991,Recurrent Networks and NARMA Modeling,J. Connor et al.,https://dl.acm.org/doi/10.5555/2986916.2986953
 1997,Long Short-term Memory,Sepp Hochreiter and Jurgen Schmidhuber,https://ieeexplore.ieee.org/abstract/document/6795963
 1997,Bidirectional Recurrent Neural Networks,Mike Schuster and Kuldip K. Paliwal,https://ieeexplore.ieee.org/document/650093
 2017,A Multi-Horizon Quantile Recurrent Forecaster,Ruofeng Wen et al.,https://arxiv.org/pdf/1711.11053.pdf

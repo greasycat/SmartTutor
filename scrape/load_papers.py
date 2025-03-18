@@ -25,6 +25,9 @@ class LoadPapers:
 
         # reset the index
         papers = papers.reset_index(drop=True)
+        lower_column = [col.lower() for col in papers.columns]
+        papers.columns = lower_column
+
         # set all NA values to None
         return papers
 
