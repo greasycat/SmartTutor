@@ -1,6 +1,5 @@
 import os
 import pandas as pd
-import xml.etree.ElementTree as ET
 
 class LoadPapers:
     def __init__(self, folder: str):
