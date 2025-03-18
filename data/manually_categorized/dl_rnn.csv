@@ -1,4 +1,4 @@
-Year,Paper,Authors,Link
+year,title,authors,link
 1991,Recurrent Networks and NARMA Modeling,J. Connor et al.,https://dl.acm.org/doi/10.5555/2986916.2986953
 1997,Long Short-term Memory,Sepp Hochreiter and Jurgen Schmidhuber,https://ieeexplore.ieee.org/abstract/document/6795963
 1997,Bidirectional Recurrent Neural Networks,Mike Schuster and Kuldip K. Paliwal,https://ieeexplore.ieee.org/document/650093

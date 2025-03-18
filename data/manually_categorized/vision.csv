@@ -1,4 +1,4 @@
-Year,Paper,Authors,Link
+year,title,authors,link
 1991,Face Recognition Using Eigenfaces,Matthew Turk and Alex Pentland,https://ieeexplore.ieee.org/document/139758
 1998,GradientBased Learning Applied to Document Recognition,Yann LeCun et al.,https://ieeexplore.ieee.org/document/726791
 2012,ImageNet Classification with Deep Convolutional Neural Networks,Alex Krizhevsky et al.,https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html

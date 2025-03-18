@@ -1,4 +1,4 @@
-Year,Paper,Authors,Link
+year,title,authors,link
 1989,Learnability and the Vapnik-Chervonenkis Dimension,Blumer et al.,https://dl.acm.org/doi/10.1145/76359.76371
 1989,Multilayer Feedforward Networks are Universal Approximators,Hornik et al.,https://www.sciencedirect.com/science/article/abs/pii/0893608089900208
 1991,Approximation capabilities of multilayer feedforward networks,Kurt Hornik,https://www.sciencedirect.com/science/article/abs/pii/089360809190009T

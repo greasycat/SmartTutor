@@ -1,4 +1,4 @@
-Year,Paper,Authors,Link
+year,title,authors,link
 2010,Recurrent neural network based language model,Tomas Mikolov et al.,A new recurrent neural network based language model (RNN LM) with applications to speech recognition is presented. Results indicate that it is possible to obtain around 50% reduction of perplexity by using mixture of several RNN LMs  compared to a state of the art backoff language model. Speech recognition experiments show around 18% reduction of word error rate on the Wall Street Journal task when comparing models trained on the same amount of data  and around 5% on the much harder NIST RT05 task  even when the backoff model is trained on much more data than the RNN LM. We provide ample empirical evidence to suggest that connectionist language models are superior to standard n-gram techniques  except their high computational (training) complexity.
 2013,Distributed Representations of Words and Phrases and their Compositionality,Tomas Mikolov et al.,https://arxiv.org/abs/1310.4546
 2014,Sequence to Sequence Learning with Neural Networks,Ilya Sutskever et al.,https://arxiv.org/abs/1409.3215
