@@ -3,3 +3,42 @@ year,title,authors,link
 1997,Long Short-term Memory,Sepp Hochreiter and Jurgen Schmidhuber,https://ieeexplore.ieee.org/abstract/document/6795963
 1997,Bidirectional Recurrent Neural Networks,Mike Schuster and Kuldip K. Paliwal,https://ieeexplore.ieee.org/document/650093
 2017,A Multi-Horizon Quantile Recurrent Forecaster,Ruofeng Wen et al.,https://arxiv.org/pdf/1711.11053.pdf
+2014,On the Properties of Neural Machine Translation: Encoder–Decoder Approaches,Kyunghyun Cho et al.,https://arxiv.org/pdf/1409.1259.pdf
+1989,A Local Learning Algorithm for Dynamic Feedforward and Recurrent Networks,Schmidhuber J.,Most known learning algorithms for dynamic neural networks in non-stationary environments need global computations to perform credit assignment. These algorithms either are not local in time or not local in space. Those algorithms which are local in both time and space usually cannot deal sensibly with ‘hidden units’. In contrast  as far as we can judge  learning rules in biological systems with many ‘hidden units’ are local in both space and time. In this paper we propose a parallel on-line learning algorithms which performs local computations only  yet still is designed to deal with hidden units and with units whose past activations are ‘hidden in time’. The approach is inspired by Holland's idea of the bucket brigade for classifier systems  which is transformed to run on a neural network with fixed topology. The result is a feedforward or recurrent ‘neural’ dissipative system which is consuming ‘weight-substance’ and permanently trying to distribute this substance onto its connections in an appropriate way. Simple experiments demonstrating the feasibility of the algorithm are reported.
+2000,A Signal-Flow-Graph Approach to On-line Gradient Calculation,Campolucci P. Uncini A. Piazza F.,https://ieeexplore.ieee.org/document/6790076/
+2007,An Application of Recurrent Neural Networks to Discriminative Keyword Spotting,FernÃ¡ndez S. Graves A. Schmidhuber J.,http://dl.acm.org/citation.cfm?id=1778066.1778092
+2017,Attention is All you Need,Vaswani A. et al.,https://proceedings.neurips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html
+1997,Bidirectional recurrent neural networks,Schuster M. Paliwal K.K.,https://ieeexplore.ieee.org/document/650093
+1996,Constructing Deterministic Finite-State Automata in Recurrent Neural Networks,Omlin C.W. Giles C.L.,https://dl.acm.org/doi/10.1145/235809.235811
+2014,Constructing Long Short-Term Memory based Deep Recurrent Neural Networks for Large Vocabulary Speech Recognition,Li X. Wu X.,https://arxiv.org/abs/1410.4281
+2018,Deep contextualized word representations,Peters M.E. et al.,https://arxiv.org/abs/1802.05365
+2016,Doctor AI: Predicting Clinical Events via Recurrent Neural Networks,Choi E. et al.,http://proceedings.mlr.press/v56/Choi16.html
+2016,Exploring the Limits of Language Modeling,Jozefowicz R. et al.,https://arxiv.org/abs/1602.02410
+2007,Fast model-based protein homology detection without alignment,Hochreiter S. Heusel M. Obermayer K.,https://doi.org/10.1093/bioinformatics/btm247
+2023,Forecasting CPI inflation components with Hierarchical Recurrent Neural Networks,Barkan O. et al.,https://arxiv.org/abs/2011.07920
+2005,Framewise phoneme classification with bidirectional LSTM and other neural network architectures,Graves A. Schmidhuber J.,https://www.sciencedirect.com/science/article/abs/pii/S0893608005001206
+2017,Gate-Variants of Gated Recurrent Unit (GRU) Neural Networks,Dey R. Salem F.M.,https://arxiv.org/abs/1701.05923
+2016,Hybrid computing using a neural network with dynamic external memory,Graves A. et al.,https://www.nature.com/articles/nature20101
+2018,Independently Recurrent Neural Network (IndRNN): Building a Longer and Deeper RNN,Li S. et al.,https://arxiv.org/abs/1803.04831
+2003,Kalman filters improve LSTM network performance in problems unsolvable by traditional recurrent nets,Prez-Ortiz J.A. et al.,https://www.sciencedirect.com/science/article/abs/pii/S0893608002002198
+1992,"Learning complex, extended sequences using the principle of history compression",Schmidhuber J.,https://ieeexplore.ieee.org/document/6795261
+2014,Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation,Cho K. et al.,https://arxiv.org/abs/1406.1078
+2002,Learning precise timing with LSTM recurrent networks,Gers F.A. Schraudolph N.N. Schmidhuber J.,https://dl.acm.org/doi/10.1162/153244303768966139
+1996,Learning task-dependent distributed representations by backpropagation through structure,Goller C. KÃ¼chler A.,https://ieeexplore.ieee.org/document/548916
+2002,Learning the Long-Term Structure of the Blues,Eck D. Schmidhuber J.,https://link.springer.com/chapter/10.1007/3-540-46084-5_47
+2001,LSTM Recurrent Networks Learn Simple Context Free and Context Sensitive Languages,Gers F.A. Schmidhuber J.,https://ieeexplore.ieee.org/document/963769
+2015,Multilingual Language Processing From Bytes,Gillick D. et al.,https://arxiv.org/abs/1512.00103
+2014,Neural Turing Machines,Graves A. Wayne G. Danihelka I.,https://arxiv.org/abs/1410.5401
+2009,Offline Handwriting Recognition with Multidimensional Recurrent Neural Networks,Graves A. Schmidhuber J.,https://papers.nips.cc/paper_files/paper/2008/hash/66368270ffd51418ec58bd793f2d9b1b-Abstract.html
+1999,On-Line Learning Algorithms for Locally Recurrent Neural Networks,Campolucci P. et al.,https://ieeexplore.ieee.org/document/750549
+2015,Photo-Real Talking Head with Deep Bidirectional LSTM,Fan B. et al.,https://ieeexplore.ieee.org/document/7178899
+2016,Pixel Recurrent Neural Networks,Oord A. et al.,https://proceedings.mlr.press/v48/oord16.html
+2017,Predictive Business Process Monitoring with LSTM Neural Networks,Tax N. et al.,https://arxiv.org/abs/1612.02130
+2019,Recurrent neural networks for time series forecasting,PetnehÃ¡zi G.,https://arxiv.org/abs/1901.00069
+2014,Sequence to Sequence Learning with Neural Networks,Sutskever I. Vinyals O. Le Q.V.,https://arxiv.org/abs/1409.3215
+2011,Sequential Deep Learning for Human Action Recognition,Baccouche M. et al.,https://link.springer.com/chapter/10.1007/978-3-642-25446-8_4
+2017,Simplified Minimal Gated Unit Variations for Recurrent Neural Networks,Heck J. Salem F.M.,https://arxiv.org/abs/1701.03452
+1999,Solving non-Markovian control tasks with neuroevolution,Gomez F.J. Miikkulainen R.,http://www.cs.utexas.edu/users/nn/downloads/papers/gomez.ijcai99.pdf
+2013,Speech recognition with deep recurrent neural networks,Graves A. Mohamed A. Hinton G.E.,https://arxiv.org/abs/1303.5778
+2019,Speech synthesis from neural decoding of spoken sentences,Chang E.F. Chartier J. Anumanchipalli G.K.,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9714519
+2007,Unconstrained Online Handwriting Recognition with Recurrent Neural Networks,Graves A. et al.,http://dl.acm.org/citation.cfm?id=2981562.2981635

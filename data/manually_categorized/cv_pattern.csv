@@ -1,0 +1,55 @@
+year,title,authors,link
+1998,GradientBased Learning Applied to Document Recognition,Yann LeCun et al.,https://ieeexplore.ieee.org/document/726791
+2012,ImageNet Classification with Deep Convolutional Neural Networks,Alex Krizhevsky et al.,https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html
+2013,"OverFeat: Integrated recognition, localization and detection using convolutional networks",P. Sermanet et al.,http://arxiv.org/pdf/1312.6229
+2013,Network in network,M. Lin et al.,http://arxiv.org/pdf/1312.4400
+2013,Learning hierarchical features for scene labeling,C. Farabet et al.,https://ieeexplore.ieee.org/document/6338939
+2013,3D convolutional neural networks for human action recognition,S. Ji et al.,https://ieeexplore.ieee.org/document/6165309
+2014,Very Deep Convolutional Networks for Large-Scale Image Recognition,Karen Simonyan and Andrew Zisserman,https://arxiv.org/abs/1409.1556
+2014,Understanding Deep Image Representations by Inverting Them,Aravindh Mahendran and Andrea Vedaldi,https://arxiv.org/abs/1412.0035
+2014,CNN features off-the-Shelf: An astounding baseline for recognition,A. Razavian et al.,https://arxiv.org/abs/1403.6382
+2014,Learning and transferring mid-Level image representations using convolutional neural networks,M. Oquab et al.,https://ieeexplore.ieee.org/document/6909618
+2014,Visualizing and understanding convolutional networks,M. Zeiler and R. Fergus,http://arxiv.org/pdf/1311.2901
+2014,Decaf: A deep convolutional activation feature for generic visual recognition,J. Donahue et al.,http://arxiv.org/pdf/1310.1531
+2014,Return of the devil in the details: delving deep into convolutional nets,K. Chatfield et al.,http://arxiv.org/pdf/1405.3531
+2014,Rich feature hierarchies for accurate object detection and semantic segmentation,R. Girshick et al.,https://arxiv.org/abs/1311.2524
+2014,Spatial pyramid pooling in deep convolutional networks for visual recognition,K. He et al.,http://arxiv.org/pdf/1406.4729
+2014,Semantic image segmentation with deep convolutional nets and fully connected CRFs,L. Chen et al.,https://arxiv.org/pdf/1412.7062
+2014,DeepFace: Closing the gap to human-level performance in face verification,Y. Taigman et al.,https://ieeexplore.ieee.org/document/6909616
+2014,Large-scale video classification with convolutional neural networks,A. Karpathy et al.,https://ieeexplore.ieee.org/document/6909619
+2014,Two-stream convolutional networks for action recognition in videos,K. Simonyan et al.,https://arxiv.org/abs/1406.2199
+2015,Inceptionism: Going Deeper into Neural Networks,Alexander Mordvintsev et al.,Artificialneural networks have spurred remarkable recent progress in image classification and speech recognition but even though these are very useful tools based on wellknown mathematical methods we actually understand surprisingly little of why certain models work and others dont so lets take a look at some simple techniques for peeking inside these networkswe train an artificial neural network by showing it millions of training examples and gradually adjusting the network parameters until it gives the classifications we want the network typically consists of 1030 stacked layers of artificial neurons each image is fed into the input layer which then talks to the next layer until eventually the output layer is reached the networks answer comes from this final output layer
+2015,Deep Residual Learning for Image Recognition,Kaiming He et al.,https://arxiv.org/pdf/1512.03385.pdf
+2015,Going deeper with convolutions,C. Szegedy et al.,https://arxiv.org/abs/1409.4842
+2015,Fully convolutional networks for semantic segmentation,J. Long et al.,https://arxiv.org/abs/1411.4038
+2015,Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks,S. Ren et al.,https://arxiv.org/abs/1506.01497
+2015,Fast R-CNN,R. Girshick,https://arxiv.org/abs/1504.08083
+2015,A neural algorithm of artistic style,L. Gatys et al.,https://arxiv.org/pdf/1508.06576
+2015,"Show, attend and tell: Neural image caption generation with visual attention",K. Xu et al.,http://arxiv.org/pdf/1502.03044
+2015,Show and tell: A neural image caption generator,O. Vinyals et al.,https://arxiv.org/abs/1411.4555
+2015,Long-term recurrent convolutional networks for visual recognition and description,J. Donahue et al.,https://arxiv.org/abs/1411.4389
+2016,Feature Pyramid Networks for Object Detection,Tsung-Yi Lin et al.,https://arxiv.org/pdf/1612.03144.pdf
+2016,Rethinking the inception architecture for computer vision,C. Szegedy et al.,https://arxiv.org/abs/1512.00567
+2016,"Inception-v4, inception-resnet and the impact of residual connections on learning",C. Szegedy et al.,http://arxiv.org/pdf/1602.07261
+2016,Identity Mappings in Deep Residual Networks,K. He et al.,https://arxiv.org/pdf/1603.05027v2.pdf
+2016,Deep residual learning for image recognition,K. He et al.,http://arxiv.org/pdf/1512.03385
+2016,"You only look once: Unified, real-time object detection",J. Redmon et al.,https://arxiv.org/abs/1506.02640
+2016,Image Super-Resolution Using Deep Convolutional Networks,C. Dong et al.,https://arxiv.org/pdf/1501.00092v3.pdf
+2017,Mask R-CNN,Kaiming He et al.,https://arxiv.org/pdf/1703.06870.pdf
+2017,MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications,Andrew G. Howard et al.,https://arxiv.org/pdf/1704.04861.pdf
+2017,Neural Discrete Representation Learning,Aaron van den Oord et al.,https://arxiv.org/pdf/1711.00937.pdf
+2018,Tracking Emerges by Colorizing Videos,Carl Vondrick et al.,https://arxiv.org/abs/1806.09594
+2018,MobileNetV2: Inverted Residuals and Linear Bottlenecks,Mark Sandler et al.,https://arxiv.org/abs/1801.04381
+2018,Deep Image Prior,Dmitry Ulyanov et al.,https://arxiv.org/abs/1711.10925
+2019,EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks,Mingxing Tan and Quoc V. Le,https://arxiv.org/abs/1905.11946
+2022,Patches Are All You Need (ConvMixer),Asher Trockman et al.,https://arxiv.org/abs/2201.09792
+2022,Block-NeRF: Scalable Large Scene Neural View Synthesis,Matthew Tancik et al.,https://arxiv.org/abs/2202.05263
+2022,DINO: DETR with Improved DeNoising Anchor Boxes for End-to-End Object Detection,Hao Zhang et al.,https://arxiv.org/abs/2203.03605
+2022,Scaling Up Your Kernels to 31×31: Revisiting Large Kernel Design in CNNs,Xiaohan Ding et al.,https://arxiv.org/abs/2203.06717
+2022,TensoRF: Tensorial Radiance Fields,Anpei Chen et al.,https://link.springer.com/chapter/10.1007/978-3-031-19824-3_20
+2023,Segment Anything in Medical Images,Junlong Cheng et al.,https://arxiv.org/abs/2304.12306
+2023,Neuralangelo: High-Fidelity Neural Surface Reconstruction,Zhaoshuo Li et al.,https://arxiv.org/abs/2306.03092
+2023,3D Gaussian Splatting for Real-Time Radiance Field Rendering,Bernhard Kerbl et al.,https://dl.acm.org/doi/abs/10.1145/3592433
+2018,Occupancy Networks: Learning 3D Reconstruction in Function Space,Lars Mescheder et al.,https://arxiv.org/abs/1812.03828
+2017,Squeeze-and-Excitation Networks,Jie Hu et al.,https://arxiv.org/abs/1709.01507
+2017,Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization,Xun Huang and Serge Belongie,https://arxiv.org/abs/1703.06868

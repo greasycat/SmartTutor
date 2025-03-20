@@ -43,6 +43,8 @@ class ArxivMetaLoader:
 
         loaded_df = loaded_df[["arxiv_id", *meta_to_keep]]
 
+        print(self.df.head())
+
         # join the downloaded_df on arxiv_id
         self.df = self.df.merge(loaded_df, on="arxiv_id", how="outer", indicator=True)
 
