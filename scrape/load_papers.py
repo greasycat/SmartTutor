@@ -70,7 +70,7 @@ class LoadPapers:
         df["summary"] = df["summary"].apply(clean_text_for_embedding)
         df["title"] = df["title"].apply(clean_text_for_embedding)
         df["authors"] = df["authors"].apply(clean_text_for_embedding)
-        df["concat"] = df["title"] + " " + df["authors"] + " " + df["summary"]
+        df["concat"] = df["year"].astype(str) + " " + df["title"] + " " + df["authors"] + " " + df["summary"]
         df["dim"] = df["concat"].apply(lambda x: len(x.split(" ")))
 
         return df
