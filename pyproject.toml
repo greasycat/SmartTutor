@@ -29,3 +29,6 @@ dependencies = [
     "umap-learn>=0.5.7",
     "webdriver-manager>=4.0.2",
 ]
+
+[tool.uv.workspace]
+members = ["dl"]
