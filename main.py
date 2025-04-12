@@ -1,10 +1,11 @@
 import argparse
 import os
 from scrape import LoadPapers
-from embedding.hf_local import Embedding
 import pandas as pd
 import ast
 import re
+from embedding.rag import RAG
+from embedding.vector_db import VectorDB
 
 def check_table_name_valid(table_name: str):
     # check if the table name is with regex 
@@ -14,6 +15,8 @@ def check_table_name_valid(table_name: str):
 
 def main():
     parser = argparse.ArgumentParser()
+    
+    # exclude -g and -d
     parser.add_argument("-s", "--scrape", action="store_true", default=False, help="Scrape papers")
 
     parser.add_argument("-g", "--generate_embeddings", type=str, default="", help="Generate embeddings and save to a table")
@@ -25,6 +28,7 @@ def main():
     parser.add_argument("--cache_dir", type=str, default="cache", help="Folder to save the cache")
     parser.add_argument("--data_dir", type=str, default="data", help="Folder to save the data")
     parser.add_argument("--model", type=str, default="Alibaba-NLP/gte-multilingual-base", help="Model name")
+    parser.add_argument("--rag", action="store_true", default=False, help="Run RAG")
 
     args = parser.parse_args()
     paper_cache_dir = os.path.join(args.cache_dir, "papers")
@@ -48,30 +52,37 @@ def main():
     if args.generate_embeddings != "":
         check_table_name_valid(args.generate_embeddings)
         papers = pd.read_csv(os.path.join(data_dir, "papers.csv"))
-        embedding = Embedding()
-        embedding.load_model(args.model)
-        embedding.create_embedding_db(papers, args.generate_embeddings)
-        print(f"Embeddings saved to {args.generate_embeddings}")
+        embedding = RAG()
+        embedding.load_model(args.generate_embeddings, args.model)
+        embedding.embed_papers(papers)
+        print(f"Embeddings generated for {args.generate_embeddings}")
     
     if args.download_embeddings != "":
         check_table_name_valid(args.download_embeddings)
         embedding_file = os.path.join(args.cache_dir, f"{args.download_embeddings}_embeddings.tsv")
         meta_file = os.path.join(args.cache_dir, f"{args.download_embeddings}_meta.tsv")
+        vector_db = VectorDB()
+        table_name = f"collection_{args.download_embeddings}"
 
-        embedding = Embedding()
-        embeddings = embedding.download_embeddings(args.download_embeddings)
+        meta = vector_db.download_meta(table_name)
+        meta = [x[0] for x in meta]
+        df = pd.DataFrame(meta)
+        df.to_csv(meta_file, sep='\t', index=False)
+
         # save to tsv
-        # convert the embedding column to a list of floats
+        embeddings = vector_db.download_embeddings(table_name)
         with open(embedding_file, "w") as f:
-            for embedding in embeddings["embedding"]:
-                embedding = ast.literal_eval(embedding)
+            for embedding in embeddings:
+                embedding = ast.literal_eval(embedding[0])
                 f.write('\t'.join(map(str, embedding)) + '\n')
         
-        # save other columns to tsv called meta.tsv
-        embeddings[["year", "title", "authors", "summary", "category"]].to_csv(meta_file, sep='\t', index=False)
-
         print(f"Embeddings saved to {embedding_file}")
         print(f"Meta saved to {meta_file}")
+    
+    if args.rag:
+        rag = RAG()
+        rag.load_model(args.model)
+        rag.build_and_run()
 
     if args.stats:
         description_dict = {

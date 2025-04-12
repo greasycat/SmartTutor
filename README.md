@@ -40,16 +40,18 @@ Set up the database password environment variable
 export VECTOR_DB_PWD=thepasswordprovided
 ```
 
-The following command will extract embedding from the scraped cache and push to the vectordb
+The following command will extract embedding from the scraped cache and push to the vectordb.
+The collection name needs to be a valid table name, so it can't contain special characters.
+The model name is optional, and defaults to "Alibaba-NLP/gte-multilingual-base", check the [Embedding Models Used](#embedding-models-used) section for more details.
 ```bash
-uv run main.py --generate_embeddings
+uv run main.py --generate_embeddings <collection_name> --model <model_name>
 ```
 
 ## Download Embeddings from vector database
 
 The following command will download the embeddings from the vector database into a cache folder
 ```bash
-uv run main.py --download_embeddings
+uv run main.py --download_embeddings <collection_name> --model <model_name>
 ```
 
 
@@ -68,3 +70,8 @@ We manually categorized the papers into the following categories
 |  4 | dl_rnn        |      36 | Deep Learning with RNNs                  |
 |  5 | audio         |      25 | Audio                                    |
 |  6 | dl_rl         |      18 | Deep Learning for Reinforcement Learning |
+
+## Embedding Models Used
+The following models are used and tested for embedding the scraped data, you can use other huggingface models as well. However, some models might not be supported by the langchain huggingface module.
+1. Alibaba-NLP/gte-multilingual-base
+2. NovaSearch/jasper_en_vision_language_v1
