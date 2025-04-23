@@ -6,12 +6,13 @@ from datetime import datetime
 import os
 
 class ArxivMetaLoader:
-    def __init__(self, df: pd.DataFrame):
+    def __init__(self, df: pd.DataFrame, cache_dir: str):
+        self.cache_dir = cache_dir
         # load all the records with Link contains arxiv.org
-        self.df = df[df["Link"].str.contains("arxiv.org")]
+        self.df = df[df["link"].str.contains("arxiv.org")]
 
         # split by / and get the last element
-        self.df["arxiv_id"] = self.df["Link"].str.split("/").str[-1]
+        self.df["arxiv_id"] = self.df["link"].str.split("/").str[-1]
 
         # remove text after first v, this removes the version number
         self.df["arxiv_id"] = self.df["arxiv_id"].str.split("v").str[0]
@@ -29,22 +30,23 @@ class ArxivMetaLoader:
 
         # trim space
         self.ids = [id.strip() for id in self.ids]
-
-        # save the ids to a file
-        with open("arxiv_ids.txt", "w") as f:
-            for id in self.ids:
-                f.write(id + "\n")
     
-    def loads(self, meta_to_keep: list[str]):
-        downloaded_df = self.apply()[["arxiv_id", *meta_to_keep]]
+    def loads(self, meta_to_keep=None):
+        if meta_to_keep is None:
+            meta_to_keep = ["summary"]
 
-        # check if all the meta_to_keep are in the downloaded_df
+        loaded_df = self.apply()
+
         for meta in meta_to_keep:
-            if meta not in downloaded_df.columns:
+            if meta not in loaded_df.columns:
                 raise ValueError(f"{meta} not in downloaded_df")
 
+        loaded_df = loaded_df[["arxiv_id", *meta_to_keep]]
+
+        print(self.df.head())
+
         # join the downloaded_df on arxiv_id
-        self.df = self.df.merge(downloaded_df, on="arxiv_id", how="outer", indicator=True)
+        self.df = self.df.merge(loaded_df, on="arxiv_id", how="outer", indicator=True)
 
         # keep only the rows where the indicator is "both"
         df = self.df[self.df["_merge"] == "both"]
@@ -60,18 +62,12 @@ class ArxivMetaLoader:
         print(f"Unmatched ids: {unmatched_ids}")
 
 
-        return df
+        return df.drop(columns=["arxiv_id"])
 
-
-        
-
-
-
-
-
-
-    def apply(self, cache="cache/arxiv_meta.xml"):
+    def apply(self):
+        cache = os.path.join(self.cache_dir, "arxiv_meta.xml")
         if os.path.exists(cache):
+            print("Loading arxiv metas from cache")
             df = parse_arxiv_feed(open(cache, "r").read())
             return df
 
@@ -81,7 +77,7 @@ class ArxivMetaLoader:
             with open(cache, "w") as f:
                 f.write(response.text)
         else:
-            print(f"Failed to download arxiv metas")
+            print("Failed to download arxiv metas")
             print(response.text)
             return
         

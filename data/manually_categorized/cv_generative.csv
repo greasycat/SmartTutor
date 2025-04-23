@@ -1,0 +1,45 @@
+year,title,authors,link
+2015,Deep visual-semantic alignments for generating image descriptions,A. Karpathy and L. Fei-Fei,https://arxiv.org/abs/1412.2306
+2015,VQA: Visual question answering,S. Antol et al.,https://arxiv.org/abs/1505.00468
+2015,Spatial transformer network,M. Jaderberg et al.,https://arxiv.org/abs/1506.02025
+2019,Generating Diverse High-Fidelity Images with VQ-VAE-2,Ali Razavi et al.,https://arxiv.org/pdf/1906.00446.pdf
+2022,DreamFusion: Text-to-3D using 2D Diffusion,Ben Poole et al.,https://arxiv.org/abs/2209.14988
+2022,Better plain ViT baselines for ImageNet-1k,Lucas Beyer et al.,https://arxiv.org/abs/2205.01580
+2022,High-Resolution Image Synthesis with Latent Diffusion Models,Robin Rombach et al.,https://arxiv.org/abs/2112.10752
+2020,An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale,Alexey Dosovitskiy et al.,https://arxiv.org/abs/2010.11929
+2020,Taming Transformers for High-Resolution Image Synthesis,Patrick Esser et al.,https://arxiv.org/abs/2012.09841
+2022,A ConvNet for the 2020s,Zhuang Liu et al.,https://arxiv.org/abs/2201.03545
+2022,MaxViT: Multi-Axis Vision Transformer,Zhengzhong Tu et al.,https://arxiv.org/abs/2204.01697
+2022,Hierarchical Text-Conditional Image Generation with CLIP Latents (DALL-E 2),Aditya Ramesh et al.,https://arxiv.org/abs/2204.06125
+2022,CMT: Convolutional Neural Networks Meet Vision Transformers,Jianyuan Guo et al.,https://arxiv.org/abs/2107.06263
+2022,Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding (Imagen),Chitwan Saharia et al.,https://arxiv.org/abs/2205.11487
+2022,GIT: A Generative Image-to-text Transformer for Vision and Language,Jianfeng Wang et al.,https://arxiv.org/abs/2205.14100
+2022,Swin UNETR: Swin Transformers for Semantic Segmentation of Brain Tumors in MRI Images,Ali Hatamizadeh et al.,https://link.springer.com/chapter/10.1007/978-3-031-08999-2_22
+2022,Classifier-Free Diffusion Guidance,Jonathan Ho and Tim Salimans,https://arxiv.org/abs/2207.12598
+2022,LAION-5B: An open large-scale dataset for training next generation image-text models,Christoph Schuhmann et al.,https://arxiv.org/abs/2210.08402
+2023,DINOv2: Learning Robust Visual Features without Supervision,Maxime Oquab et al.,https://arxiv.org/abs/2304.07193
+2022,DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation,Nataniel Ruiz et al.,https://arxiv.org/abs/2208.12242
+2022,DreamFusion: Text-to-3D using 2D Diffusion,Ben Poole et al.,https://arxiv.org/abs/2209.14988
+2022,Make-A-Video: Text-to-Video Generation without Text-Video Data,Uriel Singer et al.,https://arxiv.org/abs/2209.14792
+2022,Imagic: Text-Based Real Image Editing with Diffusion Models,Bahjat Kawar et al.,https://arxiv.org/abs/2210.09276
+2022,Magic3D: High-Resolution Text-to-3D Content Creation,Chen-Hsuan Lin et al.,https://arxiv.org/abs/2211.10440
+2022,InstructPix2Pix: Learning to Follow Image Editing Instructions,Tim Brooks et al.,https://arxiv.org/abs/2211.09800
+2022,DiffusionDet: Diffusion Model for Object Detection,Shoufa Chen et al.,https://arxiv.org/abs/2211.09788
+2022,On Distillation of Guided Diffusion Models,Chenlin Meng et al.,https://arxiv.org/abs/2210.03142
+2022,Multi-Concept Customization of Text-to-Image Diffusion (Custom Diffusion),Nupur Kumari et al.,https://arxiv.org/abs/2212.04488
+2023,Vision Transformers Need Registers, T. Darcet el al., https://arxiv.org/abs/2309.16588
+2023,Scaling Vision Transformers to 22 Billion Parameters,Mostafa Dehghani et al.,https://arxiv.org/abs/2302.05442
+2023,Structure and Content-Guided Video Synthesis with Diffusion Models (Gen-1),Omer Bar-Tal et al.,https://arxiv.org/abs/2302.03011
+2022,Scalable Diffusion Models with Transformers (DiT),William Peebles and Saining Xie,https://arxiv.org/abs/2212.09748
+2023,Muse: Text-To-Image Generation via Masked Generative Transformers,Huiwen Chang et al.,https://arxiv.org/abs/2301.00704
+2023,Scaling up GANs for Text-to-Image Synthesis (GigaGAN),Minguk Kang et al.,https://arxiv.org/abs/2303.05511
+2020,Denoising Diffusion Probabilistic Models,Jonathan Ho et al.,https://arxiv.org/abs/2006.11239
+2023,Adding Conditional Control to Text-to-Image Diffusion Models (ControlNet),Lvmin Zhang et al.,https://arxiv.org/abs/2302.05543
+2023,Align your Latents: High-Resolution Video Synthesis with Latent Diffusion Models,Andreas Blattmann et al.,https://arxiv.org/abs/2304.08818
+2023,Synthetic Data from Diffusion Models Improves ImageNet Classification,Shekoofeh Azizi et al.,https://arxiv.org/abs/2304.08466
+2023,Drag Your GAN: Interactive Point-based Manipulation on the Generative Image Manifold,Xingang Pan et al.,https://arxiv.org/abs/2305.10973
+2023,Florence-2: Advancing a Unified Representation for a Variety of Vision Tasks,Bin Xiao et al.,https://arxiv.org/abs/2311.06242
+2023,SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis,Dustin Podell et al.,https://arxiv.org/abs/2307.01952
+2023,"Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, and Generation",Jinze Bai et al.,https://arxiv.org/abs/2308.12966
+2023,MVDream: Multi-view Diffusion for 3D Generation,Yichun Shi et al.,https://arxiv.org/abs/2308.16512
+2021,Learning Transferable Visual Models From Natural Language Supervision,Alec Radford et al.,https://arxiv.org/abs/2103.00020
