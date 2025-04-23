@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTutor</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+            --border-color: #e5e7eb;
+            --secondary-text: #6b7280;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary-text);
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .tab.active {
+            border-bottom: 2px solid var(--primary);
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .tab:hover:not(.active) {
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .search-container {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.375rem 0 0 0.375rem;
+            outline: none;
+        }
+
+        .search-button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 0 0.375rem 0.375rem 0;
+            transition: background-color 0.2s ease;
+        }
+
+        .search-button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .results-container {
+            background-color: var(--card-bg);
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            min-height: 200px;
+            margin-bottom: 1.5rem;
+        }
+
+        .results-heading {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .loading-indicator {
+            display: none;
+            color: var(--secondary-text);
+            align-items: center;
+        }
+
+        .loading-indicator .spinner {
+            margin-right: 0.5rem;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .results-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .search-results-item {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .search-results-item:last-child {
+            border-bottom: none;
+        }
+
+        .search-result-title {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .search-result-snippet {
+            color: var(--secondary-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .search-result-score {
+            font-size: 0.875rem;
+            color: var(--primary);
+        }
+
+        .history-container {
+            margin-bottom: 2rem;
+        }
+
+        .history-heading {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-text);
+        }
+
+        .history-items {
+            display: flex;
+            overflow-x: auto;
+            padding-bottom: 0.5rem;
+            gap: 0.5rem;
+        }
+
+        .history-item {
+            background-color: #f3f4f6;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .history-item:hover {
+            background-color: #e5e7eb;
+        }
+
+        .error-message {
+            color: #ef4444;
+            padding: 1rem;
+            background-color: #fee2e2;
+            border-radius: 0.375rem;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .tabs {
+                flex-direction: column;
+                border-bottom: none;
+            }
+
+            .tab {
+                border-bottom: 1px solid var(--border-color);
+                padding: 1rem;
+            }
+
+            .tab.active {
+                border-left: 2px solid var(--primary);
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .search-container {
+                flex-direction: column;
+            }
+
+            .search-input {
+                border-radius: 0.375rem 0.375rem 0 0;
+            }
+
+            .search-button {
+                border-radius: 0 0 0.375rem 0.375rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">SmartTutor</div>
+            <div class="subtitle">Ask questions about AI/ML papers</div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" id="tab-rag">Question Answering</div>
+            <div class="tab" id="tab-search">Document Search</div>
+        </div>
+
+        <div class="error-message" id="error-message"></div>
+
+        <div class="history-container">
+            <div class="history-heading">Recent Queries</div>
+            <div class="history-items" id="history-items">
+                <!-- History items will be populated here -->
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" id="search-input" placeholder="Ask a question or search for documents...">
+            <button class="search-button" id="search-button">Submit</button>
+        </div>
+
+        <div class="results-container">
+            <div class="results-heading">
+                <span id="results-title">Results</span>
+                <div class="loading-indicator" id="loading-indicator">
+                    <div class="spinner"></div>
+                    <span>Loading...</span>
+                </div>
+            </div>
+            <div class="results-content" id="results-content">
+                <!-- Results will be displayed here -->
+                <div style="color: var(--secondary-text); text-align: center; padding: 2rem;">
+                    Enter a question or search query above to get started
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM elements
+        const tabRag = document.getElementById('tab-rag');
+        const tabSearch = document.getElementById('tab-search');
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const resultsTitle = document.getElementById('results-title');
+        const resultsContent = document.getElementById('results-content');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const errorMessage = document.getElementById('error-message');
+        const historyItems = document.getElementById('history-items');
+
+        // State
+        let currentMode = 'rag'; // 'rag' or 'search'
+        let queryHistory = JSON.parse(localStorage.getItem('ragQueryHistory') || '[]');
+
+        // Initialize
+        updateHistoryDisplay();
+        updatePlaceholder();
+
+        // Event listeners
+        tabRag.addEventListener('click', () => {
+            setActiveTab(tabRag);
+            currentMode = 'rag';
+            updatePlaceholder();
+        });
+
+        tabSearch.addEventListener('click', () => {
+            setActiveTab(tabSearch);
+            currentMode = 'search';
+            updatePlaceholder();
+        });
+
+        searchButton.addEventListener('click', handleSubmit);
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                handleSubmit();
+            }
+        });
+
+        // Functions
+        function setActiveTab(activeTab) {
+            tabRag.classList.remove('active');
+            tabSearch.classList.remove('active');
+            activeTab.classList.add('active');
+        }
+
+        function updatePlaceholder() {
+            if (currentMode === 'rag') {
+                searchInput.placeholder = 'Ask a question...';
+                resultsTitle.textContent = 'Answer';
+            } else {
+                searchInput.placeholder = 'Search for documents...';
+                resultsTitle.textContent = 'Search Results';
+            }
+        }
+
+        async function handleSubmit() {
+            const query = searchInput.value.trim();
+            
+            if (!query) return;
+
+            // Show loading indicator
+            loadingIndicator.style.display = 'flex';
+            errorMessage.style.display = 'none';
+            resultsContent.innerHTML = '';
+
+            try {
+                let response;
+                if (currentMode === 'rag') {
+                    response = await fetchRagResponse(query);
+                    displayRagResults(response);
+                } else {
+                    response = await fetchSearchResults(query);
+                    displaySearchResults(response);
+                }
+
+                // Add to history
+                addToHistory(query);
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.textContent = `Error: ${error.message || 'Failed to get response'}`;
+                errorMessage.style.display = 'block';
+            } finally {
+                loadingIndicator.style.display = 'none';
+            }
+        }
+
+        async function fetchRagResponse(question) {
+            const url = new URL('http://localhost:8000/rag/');
+            url.search = new URLSearchParams({ question }).toString();
+            
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Server returned ${response.status} ${response.statusText}`);
+            }
+            
+            return await response.json();
+        }
+
+        async function fetchSearchResults(query) {
+            const url = new URL('http://localhost:8000/search/');
+            url.search = new URLSearchParams({ query }).toString();
+            
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Server returned ${response.status} ${response.statusText}`);
+            }
+            
+            return await response.json();
+        }
+
+        function displayRagResults(data) {
+            if (!data || typeof data !== 'object') {
+                resultsContent.textContent = 'Invalid response from server';
+                return;
+            }
+
+            // Get the answer from the 'answer' field as specified
+            const answer = data.answer;
+            
+            if (answer === undefined || answer === null) {
+                resultsContent.textContent = 'No answer provided in the response';
+                return;
+            }
+
+            resultsContent.textContent = answer;
+        }
+
+        function displaySearchResults(data) {
+            if (!data || !data.results || !Array.isArray(data.results)) {
+                resultsContent.textContent = 'No results found or invalid response format';
+                return;
+            }
+            
+            const results = data.results;
+            
+            if (results.length === 0) {
+                resultsContent.textContent = 'No results found';
+                return;
+            }
+
+            resultsContent.innerHTML = '';
+
+            results.forEach((result) => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'search-results-item';
+
+                // Extract the specified fields from each result
+                const { year, title, authors, summary, category } = result;
+                
+                let authorsText = Array.isArray(authors) ? authors.join(', ') : authors;
+
+                resultItem.innerHTML = `
+                    <div class="search-result-title">${escapeHtml(title || 'Untitled')} (${escapeHtml(year || '')})</div>
+                    <div style="margin-bottom: 0.5rem; font-style: italic;">${escapeHtml(authorsText || '')}</div>
+                    <div class="search-result-snippet">${escapeHtml(summary || '')}</div>
+                `;
+
+                resultsContent.appendChild(resultItem);
+            });
+        }
+
+        function escapeHtml(unsafe) {
+            if (unsafe === undefined || unsafe === null) {
+                return '';
+            }
+            if (typeof unsafe !== 'string') {
+                unsafe = String(unsafe);
+            }
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function addToHistory(query) {
+            // Remove if exists already
+            queryHistory = queryHistory.filter(item => item.query !== query);
+            
+            // Add to beginning
+            queryHistory.unshift({
+                query,
+                mode: currentMode,
+                timestamp: Date.now()
+            });
+            
+            // Keep only last 10
+            queryHistory = queryHistory.slice(0, 10);
+            
+            // Save to localStorage
+            localStorage.setItem('ragQueryHistory', JSON.stringify(queryHistory));
+            
+            // Update display
+            updateHistoryDisplay();
+        }
+
+        function updateHistoryDisplay() {
+            historyItems.innerHTML = '';
+            
+            queryHistory.forEach(item => {
+                const historyItem = document.createElement('div');
+                historyItem.className = 'history-item';
+                historyItem.textContent = item.query;
+                historyItem.title = `${item.mode === 'rag' ? 'Question' : 'Search'}: ${item.query}`;
+                
+                historyItem.addEventListener('click', () => {
+                    // Set mode
+                    if (item.mode === 'rag') {
+                        setActiveTab(tabRag);
+                        currentMode = 'rag';
+                    } else {
+                        setActiveTab(tabSearch);
+                        currentMode = 'search';
+                    }
+                    
+                    updatePlaceholder();
+                    
+                    // Set input value
+                    searchInput.value = item.query;
+                    
+                    // Submit
+                    handleSubmit();
+                });
+                
+                historyItems.appendChild(historyItem);
+            });
+        }
+    </script>
+</body>
+</html>

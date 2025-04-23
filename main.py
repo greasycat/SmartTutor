@@ -1,5 +1,6 @@
 import argparse
 import os
+import uvicorn
 from scrape import LoadPapers
 import pandas as pd
 import ast
@@ -28,7 +29,11 @@ def main():
     parser.add_argument("--cache_dir", type=str, default="cache", help="Folder to save the cache")
     parser.add_argument("--data_dir", type=str, default="data", help="Folder to save the data")
     parser.add_argument("--model", type=str, default="Alibaba-NLP/gte-multilingual-base", help="Model name")
-    parser.add_argument("--rag", action="store_true", default=False, help="Run RAG")
+    parser.add_argument("--rag", type=str, default="", help="Run RAG with a collection name")
+    parser.add_argument("--search", type=str, default="", help="Search for relevant papers with a collection name")
+    parser.add_argument("--api", type=str, default="", help="Run API with a collection name")
+    parser.add_argument("--api_port", type=int, default=8000, help="API port")
+    parser.add_argument("--api_host", type=str, default="0.0.0.0", help="API host")
 
     args = parser.parse_args()
     paper_cache_dir = os.path.join(args.cache_dir, "papers")
@@ -79,10 +84,15 @@ def main():
         print(f"Embeddings saved to {embedding_file}")
         print(f"Meta saved to {meta_file}")
     
-    if args.rag:
+    if args.rag != "":
         rag = RAG()
-        rag.load_model(args.model)
-        rag.build_and_run()
+        rag.load_model(args.rag, args.model)
+        rag.interactive(callback=rag.get_rag_callback())
+    
+    if args.search != "":
+        rag = RAG()
+        rag.load_model(args.search, args.model)
+        rag.interactive(callback=rag.get_search_callback())
 
     if args.stats:
         description_dict = {
@@ -101,6 +111,11 @@ def main():
         category_counts["description"] = category_counts["category"].map(description_dict)
         # print the df in markdown format
         print(category_counts.to_markdown())
+
+    if args.api != "":
+        from api import create_app
+        app = create_app(args.api)
+        uvicorn.run(app, host=args.api_host, port=args.api_port)
 
 
 
