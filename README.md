@@ -44,16 +44,62 @@ The following command will extract embedding from the scraped cache and push to 
 The collection name needs to be a valid table name, so it can't contain special characters.
 The model name is optional, and defaults to "Alibaba-NLP/gte-multilingual-base", check the [Embedding Models Used](#embedding-models-used) section for more details.
 ```bash
-uv run main.py --generate_embeddings <collection_name> --model <model_name>
+uv run main.py -g <collection_name> --model <model_name>
+```
+
+Example:
+```bash
+uv run main.py -g gte --model "Alibaba-NLP/gte-multilingual-base"
 ```
 
 ## Download Embeddings from vector database
 
 The following command will download the embeddings from the vector database into a cache folder
 ```bash
-uv run main.py --download_embeddings <collection_name> --model <model_name>
+uv run main.py -d <collection_name> --cache_dir <cache_dir>
 ```
 
+Example:
+```bash
+uv run main.py -d gte --cache_dir embeddings
+```
+
+## How to use RAG and Search for relevant papers
+
+### Method 1: Use the command line
+
+We provided a simple interactive command line interface to use RAG and Search for relevant papers.
+
+```bash
+# To start the interactive RAG interface
+uv run main.py --rag <collection_name>
+
+# To start the interactive search interface
+uv run main.py --search <collection_name>
+```
+
+Example:
+```bash
+uv run main.py --rag gte
+```
+
+### Method 2: Use the API and (Optional) Web UI
+
+The following command will run the web UI
+```bash
+uv run main.py --api <collection_name>
+
+# If you want to run the API on a specific host and port
+uv run main.py --api <collection_name> --api_host <host> --api_port <port>
+```
+Example:
+```bash
+uv run main.py --api gte --api_host 0.0.0.0 --api_port 8000
+```
+
+We proivde a local web UI to use the API, you can access it by opening the `web_ui.html` file in your browser.
+
+![Web UI](screenshots/web_ui.png)
 
 
 # Statistics
